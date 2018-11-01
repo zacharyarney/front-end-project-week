@@ -3,7 +3,7 @@ import { ViewContainer, StyledH3, StyledInput } from '../../mixins';
 import { StyledLink } from '../../mixins';
 
 export const StyledView = styled(ViewContainer)`
-padding: 0;
+  padding: 0;
 `;
 
 export const SearchBar = styled.div`
@@ -27,15 +27,39 @@ export const ListTitle = styled(StyledH3)`
 `;
 
 export const StyledListDiv = styled.div`
-display: flex;
-flex-flow: row wrap;
-justify-content: flex-start;
-width: 100%;
-padding: 33px 1px;
-margin-left: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 33px 1px;
+  margin-left: 30px;
 `;
 
 export const StyledNoteLink = styled(StyledLink)`
   margin-right: 17.5px;
   margin-bottom: 27px;
+  animation-name: out;
+  animation-duration: 300ms;
+  box-shadow: 0px 3px 5px -3px rgb(0, 0, 0);
+  :hover {
+    animation-name: in;
+    animation-duration: 300ms;
+    box-shadow: 0 5px 15px -5px rgb(0, 0, 0);
+  }
+  @keyframes in {
+    from {
+      box-shadow: 0px 3px 5px -3px rgb(0, 0, 0);
+    }
+    to {
+      box-shadow: 0 5px 15px -5px rgb(0, 0, 0);
+    }
+  }
+  @keyframes out {
+    from {
+      box-shadow: 0 5px 15px -5px rgb(0, 0, 0);
+    }
+    to {
+      box-shadow: 0px 3px 5px -3px rgb(0, 0, 0);
+    }
+  }
 `;
