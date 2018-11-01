@@ -30,7 +30,10 @@ export const Button = styled.div`
   text-align: center;
   padding: 15px 0;
   border: 1px solid gray;
-  margin: 0 0 21px;
+  border-radius: 3px;
+  :active {
+    box-shadow: inset 0px 2px 5px -1px rgb(0, 0, 0);
+  }
 `;
 
 export const StyledH3 = styled.h3`
